@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routing Information Protocol (RIP)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Routing Information Protocol (RIP)</h1>
+        <a href="index.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Routing Information Protocol (RIP)</h2>
+
+            <p>Here you will learn the basic commands for configuring Routing Information Protocol (RIP) on your Cisco router.</p>
+		<p> </p>		
+ 
+		<p><b>RO(config)#router rip RO(config-router)#network B.C.D.E</b></p>
+            <p><em>Enable the RIP routing protocol. By default it enables version 1</em>
+            	</p>
+ 		
+
+		<p><b>RO(config-router)#version 2</b></p>
+            	<p><em>Enable RIP Routing Protocol Version 2</em>
+            	</p>
+
+		<p><b>RO(config-router)#no network B.C.D.E</b></p>
+            	<p><em>Remove the IP address from the RIP routing protocol</em>
+            	</p>
+
+		<p><b>RO(config)#no router rip</b></p>
+            	<p><em>Disables the RIP routing protocol</em>
+            	</p>
+
+		<p><b>RO(config-router)#no auto-summary</b></p>
+            	<p><em>Disable automatic summarization</em>
+            	</p>
+
+		<p><b>RO(config-router)#passive-interface s0/0/0</b></p>
+            	<p><em>Enable RIP not to issue routing updates from this interface</em>
+            	</p>
+
+		<p><b>RO(config-router)#ip Split-horizon</b></p>
+            	<p><em>Enable split horizon</em>
+            	</p>
+
+		<p><b>RO(config-router)#no ip Split-horizon</b></p>
+            	<p><em>Disable split horizon (enable by default)</em>
+            	</p>
+		
+		<p><b>RO(config-router)#timers basic 30 90 180 270 360</b></p>
+            	<p><em>Set the RIP timer in seconds. 30 (Routing Update), 90 (Invalid Timer), 180 (Hold Timer), 270 (Discharge Timer), 360 (Sleep Timer)</em>
+            	</p>
+
+		<p><b>RO#debug ip rip</b></p>
+            	<p><em>Allows you to see all RIP-related activity in real-time</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport mode trunk</b></p>
+            	<p><em>Changing the Interface Mode in Trunk</em>
+            	</p>
+		
+		<p><b>RO#show ip rip database</b></p>
+            	<p><em>Displays the contents of the RIP private database</em>
+            	</p>
+
+		<p><b>RO#show ip protocols</b></p>
+            	<p><em>Displays the IPv4 routing protocol parameters currently configured on the router</em>
+            	</p>
+
+		
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

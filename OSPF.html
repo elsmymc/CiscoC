@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Shortest Path First (OSPF)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Open Shortest Path First (OSPF)</h1>
+        <a href="Index.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Open Shortest Path First (OSPF)</h2>
+
+            <p>Here you will learn the open shortest path first for configuring a Cisco router.</p>
+		<p> </p>
+		 
+		<p><b>RO(config)#router ospf 10</b></p>
+            	<p><em>Enable ospf routing protocol under ID 10 processes</em>
+            	</p>
+
+		<p><b>RRO(config-router)#network 10.10.0.0 0.0.255.255 area 0</b></p>
+            	<p><em>Enable ospf with Area 0 Matching Interface</em>
+            	</p>
+
+		<p><b>RO(config)# interface loopback 0 10.10.0.0 0.0.255.255</b></p>
+            	<p><em>Create a loopback interface</em>
+            	</p>
+
+		<p><b>RO(config-if)#ip address 192.168.250.250 255.255.255.0</b></p>
+            	<p><em>Assign the IP address to the loopback interface</em>
+            	</p>
+
+		<p><b>RO(config-router)#router-id 1.1.1.1</b></p>
+            	<p><em>Set 1.1.1.1 as the Router ID</em>
+            	</p>
+
+		<p><b>RO(config-if)#ip ospf priority 200</b></p>
+            	<p><em>Configuration to influence dr/BDR selection processes. The valid range is 0 to 255.0 makes the router intelligible for dr/bdr</em>
+            	</p>
+		
+		<p><b>RO(config-if)#bandwidth 256</b></p>
+            	<p><em>Configuration to influence the metric cost of the route. Higher bandwidth has lower cost. Bandwidth is defined in kbps. 256 is 256 kbps</em>
+            	</p>
+		
+		<p><b>RO(config-if)#ip ospf hello-interval timer 20</b></p>
+            	<p><em>Set hello time interval to 20 seconds. The greeting time must match on both routers to become neighbors</em>
+            	</p>
+
+		<p><b>Router(config-if)#ip ospf dead-interval 50</b></p>
+            	<p><em>Set the dead interval time to 50 seconds. The dead interval time must match on both routers to become neighbors</em>
+            	</p>
+
+		<p><b>RO#show ip route ospfighbors detail</b></p>
+            	<p><em>Displays all learned routers through the OSPF routing table</em>
+            	</p>
+
+		<p><b>RO#show ip ospf</b></p>
+            	<p><em>Muestra información básica sobre OSPF</em>
+            	</p>
+
+		<p><b>RO#show ip ospf interface</b></p>
+            	<p><em>Displays information about all active OSPF interfaces</em>
+            	</p>
+
+		<p><b>RO#show ip ospf interface serial 1/1/1</b></p>
+            	<p><em>Displays OSPF information about the 1/1/1 serial interface</em>
+            	</p>
+
+		<p><b>RO#show ip ospf neighbor list all</b></p>
+            	<p><em>Displays basic information of neighbors with OSPF</em>
+            	</p>
+
+		<p><b>RO#show ip ospf neighbors detail</b></p>
+            	<p><em>Displays detailed information of neighbors with OSPF</em>
+            	</p>
+
+		<p><b>RO#show ip ospf database</b></p>
+            	<p><em>Displays information from the OSPF database</em>
+            	</p>
+
+		<p><b>RO#clear ip route *</b></p>
+            	<p><em>Cleans up all routes in the routing table</em>
+            	</p>
+
+		<p><b>RO#clear</b></p>
+            	<p><em>Cleans up a particular route from the routing table</em>
+            	</p>
+
+		<p><b>RO#clear ip opsf counters</b></p>
+            	<p><em>Clean OSPF meters</em>
+            	</p>
+			
+		<p><b>RO#debug ip ospf events</b></p>
+            	<p><em>Displays all OSPF events</em>
+            	</p>
+
+		<p><b>RO#debug ip ospf packets</b></p>
+            	<p><em>Displays changes to OSPF packages</em>
+            	</p>		
+
+		<p><b>RO#debug ip ospf adjacency</b></p>
+            	<p><em>Displays DR/BDR state election processes</em>
+            	</p>		
+
+			
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

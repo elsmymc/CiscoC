@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Address Translation (NAT)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Network Address Translation (NAT)</h1>
+        <a href="Index.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Network Address Translation (NAT)</h2>
+
+            <p>Here you will learn the networ address transation for configuring a Cisco router.</p>
+		<p> </p>
+		 
+		<p><b>RO(config)#access-list 3 permit 192.168.1.0 0.0.0.255</b></p>
+            	<p><em>Create an ACL that determines that the IP address can be translated (Dynamic NAT)</em>
+            	</p>
+
+		<p><b>RO(config)#ip nat poll PUB 200.1.1.1 200.1.1.6 netmask 255.255.255.248</b></p>
+            	<p><em>Create a public IP address survey (Dynamic NAT)</em>
+            	</p>
+
+		<p><b>RO(config)#ip nat inside source list 3 poll PUB</b></p>
+            	<p><em>Set up a NAT statement</em>
+            	</p>
+
+		<p><b>RO(config)#ip nat inside source list 3 pool PUB overload</b></p>
+            	<p><em>Using Keyword Overload at the End of NAT Statement</em>
+            	</p>
+
+		<p><b>RO#show ip nat stasitics</b></p>
+            	<p><em>Display counters for packages and native table entries, as well as basic configuration information</em>
+            	</p>
+
+		<p><b>RO(config-if)#interface serial 0/0/0/0.1 point-to-point</b></p>
+            	<p><em>Create a Peer-to-Peer Subinterface Numbered 1</em>
+            	</p>
+		
+		<p><b>RO#show ip nat translations</b></p>
+            	<p><em>Show the NAT table</em>
+            	</p>
+		
+		<p><b>RO#clear ip nat translations *</b></p>
+            	<p><em>Clean up all dynamic entries in the NAT table</em>
+            	</p>
+
+		<p><b>RO#debug ip nat</b></p>
+            	<p><em>Issues a log message to describe each packet whose IP address is translated with NAT</em>
+            	</p>
+
+							
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

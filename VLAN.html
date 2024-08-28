@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Local Area Network (VLAN)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Local Area Network (VLAN)</h1>
+        <a href="index.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Virtual Local Area Network (VLAN)</h2>
+
+            <p>Here you will learn the basic commands for configuring a virtual local area network (VLAN) on Cisco router.</p>
+		<p> </p>		
+ 
+		<p><b>RVTP (Vlan Trunking Protocol)</b></p>
+            <p><em>Used by CISCO switches to exchange VLAN information. You can synchronize vlan information (for example, vlan ID or VLAN name) with switches within the same vtp domain
+            </em>
+            	</p>
+ 		
+
+		<p><b>Trunk</b></p>
+            	<p><em>A trunk can consist of multiple cables, cables, or fiber optic strands grouped together to maximize the bandwidth available on a single physical cable</em>
+            	</p>
+
+		<p><b>SW(config)#vtp mode server</b></p>
+            	<p><em>Configuring the Switch as a VTP Server</em>
+            	</p>
+
+		<p><b>SW(config)#vtp mode client</b></p>
+            	<p><em>Configuring the Switch as a VTP Client</em>
+            	</p>
+
+		<p><b>SW(config)#vtp mode trasnparent</b></p>
+            	<p><em>Configuring the Switch as a Transparent VTP</em>
+            	</p>
+
+		<p><b>SW(config)#no vtp mode configure</b></p>
+            	<p><em>Configure the default switch in VTP server mode</em>
+            	</p>
+
+		<p><b>SW(config)#vtp domain domain-name</b></p>
+            	<p><em>Set VTP domain name</em>
+            	</p>
+
+		<p><b>SW(config)#vtp password password</b></p>
+            	<p><em>Set VTP password. Password is case sensitive</em>
+            	</p>
+		
+		<p><b>SW#show vtp status</b></p>
+            	<p><em>Display VTP status, including overview</em>
+            	</p>
+
+		<p><b>SW#show vtp counters</b></p>
+            	<p><em>Show Switch VTP Counters</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport mode trunk</b></p>
+            	<p><em>Changing the Interface Mode in Trunk</em>
+            	</p>
+		
+		<p><b>SW(config)#vlan 10</b></p>
+            	<p><em>Create a VLAN and associate it with ID 10</em>
+            	</p>
+
+		<p><b>SW(config-vlan)#name sales</b></p>
+            	<p><em>Name the VLAN</em>
+            	</p>
+
+		<p><b>SW(config)#interface fastethernet 0/1</b></p>
+            	<p><em>Enter Interface Configuration Mode</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport mode Access</b></p>
+            	<p><em>Set the interface binding type to access it</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport Access vlan 10</b></p>
+            	<p><em>Asignar interface a VLAN 10</em>
+            	</p>
+
+		<p><b>SW#show vlan</b></p>
+            	<p><em>Show VLAN Information</em>
+            	</p>
+
+		<p><b>SW#show vlan brief</b></p>
+            	<p><em>Show short VLAN information</em>
+            	</p>
+
+		<p><b>SW#show vlan id 10</b></p>
+            	<p><em>Show ID 10 Only VLAN Information</em>
+            	</p>
+
+		<p><b>SW#show vlan name HR</b></p>
+            	<p><em>Show information only for the named VLAN HR</em>
+            	</p>
+		
+		<p><b>SW(config)#interface fastethernet 0/8</b></p>
+            	<p><em>Enter Interface Configuration Mode</em>
+            	</p>
+
+		<p><b>SW(config-if)#no switchport Access vlan 10</b></p>
+            	<p><em>Remove the interface from VLAN 10 and reassign it to VLAN 1 by default</em>
+            	</p>
+		
+		<p><b>SW(config)#no vlan 10</b></p>
+            	<p><em>Delete VLAN 10 from the VLAN database</em>
+            	</p>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

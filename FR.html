@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Relay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Frame Relay</h1>
+        <a href="Index.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Frame Relay</h2>
+
+            <p>Here you will learn the frame relay for configuring a Cisco router.</p>
+		<p> </p>
+		 
+		<p><b>RO(config-if)#encapsulation frame-relay</b></p>
+            	<p><em>Enable frame relay encap</em>
+            	</p>
+
+		<p><b>RO(config-if)#encapsulation frame-relay ietf</b></p>
+            	<p><em>Enable ietf frame relay encapsulation on the interface. Used if Non-CISCO Routers are connected</em>
+            	</p>
+
+		<p><b>RO(config-if)#frame-relay interface-dlci 100</b></p>
+            	<p><em>Assigning DLCI number 100 on an interface</em>
+            	</p>
+
+		<p><b>RO(config-if)#frame-relay map ip 192.168.100.1 110 broadcast</b></p>
+            	<p><em>It is used to assign remote IP with local dlci statically. Assignment is done automatically using the reverse arp protocol</em>
+            	</p>
+
+		<p><b>RO(config-if)#no frame-relay inverse arp</b></p>
+            	<p><em>It is used to disable reverse ARP. If we turn off reverse ARP, we have to statically map remote IP and local DLCI</em>
+            	</p>
+
+		<p><b>RO(config-if)#interface serial 0/0/0/0.1 point-to-point</b></p>
+            	<p><em>Create a Peer-to-Peer Subinterface Numbered 1</em>
+            	</p>
+		
+		<p><b>RO#show frame-relay map</b></p>
+            	<p><em>Used to view the status of the IP/DLCI map input</em>
+            	</p>
+		
+		<p><b>RO#show frame-relay pvc</b></p>
+            	<p><em>Used to view the status of all configured PVCs</em>
+            	</p>
+
+		<p><b>Router(config-if)#ip ospf dead-interval 50</b></p>
+            	<p><em>Set the dead interval time to 50 seconds. The dead interval time must match on both routers to become neighbors</em>
+            	</p>
+
+		<p><b>RO#show frame-relay lmi</b></p>
+            	<p><em>Displays LMI statistics, including types and message exchanged</em>
+            	</p>
+
+		<p><b>RO#clear frame-relay counters</b></p>
+            	<p><em>Clear all frame relay counters</em>
+            	</p>
+
+		<p><b>RO#clear frame-relay inarp</b></p>
+            	<p><em>Reset the map table and delete all reverse arp entries</em>
+            	</p>
+
+		<p><b>RO#debug frame-relay lmi</b></p>
+            	<p><em>Enable debugging processes in LMI</em>
+            	</p>
+
+		<p><b>RO#show ip ospf neighbor list all</b></p>
+            	<p><em>Displays basic information of neighbors with OSPF</em>
+            	</p>
+
+		<p><b>RO#no debug frame-relay lmi</b></p>
+            	<p><em>Disable debugging processes in LMI</em>
+            	</p>
+
+					
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

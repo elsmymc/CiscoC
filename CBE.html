@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Editing Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Basic Editing Commands</h1>
+        <a href="MenuCB.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Basic Editing Commands</h2>
+
+            <p>Here you will learn the basic editing commands for setting up a Cisco router.</p>
+		<p> </p>
+		 
+		<p><b>RO#copy running-config startup-config</b></p>
+            	<p><em>Allows you to save changes made to NVRAM</em>
+            	</p>
+
+		<p><b>RO#wr</b></p>
+            	<p><em>Short Command</em>
+            	</p>
+
+		<p><b>RO#copy running-config tftp</b></p>
+            	<p><em>Allows you to store active settings on a TFTP server</em>
+            	</p>
+
+		<p><b>RO#copy tftp flash</b></p>
+            	<p><em>Allows you to download a new image from a TFTP server to Flash memory</em>
+            	</p>
+
+		<p><b>RO#copy flash tftp</b></p>
+            	<p><em>Allows copying the system image from Flash memory to a TFTP server</em>
+            	</p>
+
+		<p><b>RO#copy tftp running-config</b></p>
+            	<p><em>Allows configuration information to be uploaded from a TFTP server</em>
+            	</p>
+
+		<p><b>RO#reload</b></p>
+            	<p><em>Allows you to reset startup settings and recharge your device</em>
+            	</p>
+		
+		<p><b>RO#erase startup-config</b></p>
+            	<p><em>Clear the startup settings (NVRAM) and restart the device</em>
+            	</p>
+
+		<p><b>RO#erase flash</b></p>
+            	<p><em>Erase the contents of the Flash memory</em>
+            	</p>
+		
+				
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

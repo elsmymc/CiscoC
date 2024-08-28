@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Interior Gateway Routing Protocol (EIGRP)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Enhanced Interior Gateway Routing Protocol (EIGRP)</h1>
+        <a href="Index.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Enhanced Interior Gateway Routing Protocol (EIGRP)</h2>
+
+            <p>Here you will learn the enhanced interior gateway protocol for configuring a Cisco router.</p>
+		<p> </p>
+		 
+		<p><b>RO(config)#router eigrp 20</b></p>
+            	<p><em>Enable EIGRP with the number AS 20. The AS number must be the same on all routers to become an EIGRP neighbor</em>
+            	</p>
+
+		<p><b>RO(config-router)#network 10.10.0.0</b></p>
+            	<p><em>Enable EIGRP on interfaces that belong to the 10.0.0.0/8 network. (Classy Implementation)</em>
+            	</p>
+
+		<p><b>RO(config-router)#network 10.10.0.0 0.0.255.255</b></p>
+            	<p><em>Enable EIGRP on the interface that belongs to the 10.10.0.0/16 network. (Classless Implementation - Wildcard Mask Method)</em>
+            	</p>
+
+		<p><b>RO(config-router)#no network 10.10.0.0</b></p>
+            	<p><em>Disable EIGRP on interfaces that belong to the 10.0.0.0/8 network</em>
+            	</p>
+
+		<p><b>RO(config-router)#no auto-summary</b></p>
+            	<p><em>Turn off EIGRP's auto-summarization feature</em>
+            	</p>
+
+		<p><b>RO(config)#no router eigrp 20</b></p>
+            	<p><em>Disable the EIGRP 20 Routing Protocol</em>
+            	</p>
+		
+		<p><b>RO(config)#bandwidth 64</b></p>
+            	<p><em>Set bandwidth to 64 Kbps</em>
+            	</p>
+		
+		<p><b>RO#show ip eigrp neighbors</b></p>
+            	<p><em>Displays the neighbor table</em>
+            	</p>
+
+		<p><b>RO#show ip eigrp neighbors detail</b></p>
+            	<p><em>SShows the neighboring table in detail</em>
+            	</p>
+
+		<p><b>RO#show ip eigrp interfaces</b></p>
+            	<p><em>Muestra información sobre todas las interfaces EIGRP</em>
+            	</p>
+
+		<p><b>RO#show ip eigrp interfaces serial 0/0rface brief</b></p>
+            	<p><em>Displays information about a particular EIGRP interface</em>
+            	</p>
+
+		<p><b>RO#show ip eigrp interfaces 20</b></p>
+            	<p><em>Displays information about EIGRP interfaces that execute AS Process 20</em>
+            	</p>
+
+		<p><b>RO#show ip eigrp topology</b></p>
+            	<p><em>Displays the EIGRP topology table</em>
+            	</p>
+
+		<p><b>RO#show ip eigrp traffic</b></p>
+            	<p><em>Displays the number and type of packets sent and received</em>
+            	</p>
+
+		<p><b>RO#show ip router eigrp</b></p>
+            	<p><em>Displays the EIGRP route from the routing table</em>
+            	</p>
+
+		<p><b>RO#debug eigrp fsm</b></p>
+            	<p><em>Displays events or actions related to Feasible Successor (FSM) metrics</em>
+            	</p>
+
+		<p><b>RO#no debug eigrp fsm</b></p>
+            	<p><em>Turns off the debug message related to Feasible Successor (FSM) metrics</em>
+            	</p>
+
+		<p><b>RRO#no debug eigrp packet</b></p>
+            	<p><em>Disables debug messages related to EIGRP packages</em>
+            	</p>
+
+						
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Interface Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Basic Interface Commands</h1>
+        <a href="MenuCB.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Basic Interface Commands</h2>
+
+            <p>Here you will learn the basic interface commands for configuring a Cisco router.</p>
+	    <p></p>
+		 
+		<p><b>RO(config)#interface Gigabitethernet 0/0</b></p>
+            	<p><em>Configure the interface</em>
+            	</p>
+
+		<p><b>RO(config-if)#ip address 192.168.1.0 255.255.255.0</b></p>
+            	<p><em>Assign IPv4 address</em>
+            	</p>
+
+		<p><b>R0(config-if)#ipv6 address 2001:db8:acad:2::1/64</b></p>
+            	<p><em>Asignar dirección IPV6</em>
+            	</p>
+
+		<p><b>RO(config-if)#description LAN 1 binding</b></p>
+            	<p><em>Interface Description</em>
+            	</p>
+
+		<p><b>RO(config-if)#no shutdown</b></p>
+            	<p><em>Enable the interface</em>
+            	</p>
+
+		<p><b>RO(config-if)#ipv6 address fe80::1 link-local 2001:db8:acad:2::1/64</b></p>
+            	<p><em>Assign a FE80::1 link-local address to an interface to easily recognize that it belongs to the R router</em>
+            	</p>
+
+		<p><b>RO(config)# ip route 0.0.0.0 0.0.0.0 serial 0/0</b></p>
+            	<p><em>Assign an IPv4 link-local address to an interface to easily recognize that it belongs to the R router</em>
+            	</p>
+		
+		<p><b>RO(config)# ipv6 route ::/0 s0/0/0</b></p>
+            	<p><em>Assign IPv6 link-local address to an interface</em>
+            	</p>
+
+		<p><b>RO(config)#ip default-gateway 172.16.0.1</b></p>
+            	<p><em>Assign Default Gateway</em>
+            	</p>
+		
+				
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

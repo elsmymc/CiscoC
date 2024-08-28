@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Access Control List</h1>
+        <a href="MenuCB.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Access Control List</h2>
+
+            <p>Here you will learn the access control list for configuring a Cisco router.</p>
+		<p> </p>
+		 
+		<p><b>Standard ACL</b></p>
+            	<p><em>Only source address is specified</em>
+            	</p>
+
+		<p><b>RO(config)#access-list 1 permit 10.0.0.0 0.255.255.255</b></p>
+            	<p><em>Define who traffic is allowed</em>
+            	</p>
+
+		<p><b>RO(config)#interface Fa0/1</b></p>
+            	<p><em>Apply the ACL to the interface</em>
+            	</p>
+
+		<p><b>RO(config-if)#ipaccess-group 1 out</b></p>
+            	<p><em>Apply the ACL to the interface</em>
+            	</p>
+
+		<p><b>RO(config)#access-list 102 deny tcp any any</b></p>
+            	<p><em>Denies the rest of the traffic</em>
+            	</p>
+
+		<p><b>Extended ACL</b></p>
+            	<p><em>Protocol, source and destination address are specified</em>
+            	</p>
+
+		<p><b>RO(config)#access-list 105 permit 10.5.4.0 0.0.0.255 host 10.5.64.30 eq80</b></p>
+            	<p><em>Defines who and what protocol traffic is allowed to</em>
+            	</p>
+		
+		<p><b>RO(config)#interface serial 0/0</b></p>
+            	<p><em>Apply the ACL to the interface</em>
+            	</p>
+
+		<p><b>RO(config-if)#ipaccess-group 100 out</b></p>
+            	<p><em>Apply the ACL to the interface</em>
+            	</p>
+		
+		<p><b>RO#show Access-lists</b></p>
+            	<p><em>Display ACLs, including those used by NAT</em>
+            	</p>
+
+		<p><b>RO#show Access-lists 100</b></p>
+            	<p><em>Displays a specific ACL</em>
+            	</p>
+				
+		<p><b>RO#no Access-lists 100</b></p>
+            	<p><em>Remove a specific ACL</em>
+            	</p>		
+
+		
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Security Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Basic Security Commands</h1>
+        <a href="index.html" class="back-button">Back to top</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Basic Security Commands</h2>
+
+            <p>Here you will learn the basic security commands for setting up a Cisco router.</p>
+		 
+		<p><b>RO(config)#line con 0 RO(config-line)#password password RO(config-line)#login RO(config)#exit </b></p>
+            	<p><em>Console Port Access Settings</em>
+            	</p>
+
+		<p><b>RO(config)#line vty 0 4 RO(config-line)#password password RO(config)#login</b></p>
+            	<p><em>Configure Virtual Terminal Lines (VTYs) to enable remote access to the device, SSH, and Telnet.</em>
+            	</p>
+
+		<p><b>Router(config)# line vty 0 4 Router(config-line)# exec-timeout 10</b></p>
+            	<p><em>Set up the device to disconnect inactive users after 10 minutes</em>
+            	</p>
+
+		<p><b>RO(config)#enable secret password</b></p>
+            	<p><em>Encrypted Password (MD5 hash) settings</em>
+            	</p>
+
+		<p><b>RO(config)#service password-encryption</b></p>
+            	<p><em>Allows you to encrypt the passwords in the configuration file</em>
+            	</p>
+
+		<p><b>RO(config)#banner motd X AUTHORIZED ACCESS ONLY X</b></p>
+            	<p><em>Displays Notice of the Day message. Any user who tries to log in can see the prompts</em>
+            	</p>
+
+		<p><b>RO(config)# login block-for 120 attempts 3 within 60</b></p>
+            	<p><em>Configure to block login attempts for 120 seconds if there are three failed login attempts within 60 seconds</em>
+            	</p>
+		
+		<p><b>RO(config)#ip domain-name domain.com</b></p>
+            	<p><em>Configure DNS domain name</em>
+            	</p>
+
+		<p><b>RO(config)#crypto key generate rsa general-key modulus 1024</b></p>
+            	<p><em>Generate one-way secret keys</em>
+            	</p>
+		
+		<p><b>RO(config)#username user secret password</b></p>
+            	<p><em>Configure username and password</em>
+            	</p>
+
+		<p><b>RO(config)#line vty 0 4</b></p>
+            	<p><em>Configuring Virtual Terminal Lines (VTY)</em>
+            	</p>
+		
+		<p><b>RO(config-line)#login local</b></p>
+            	<p><em>Verify or Create a Local Database Entry</em>
+            	</p>
+
+		<p><b>RO(config-line)#transport input ssh</b></p>
+            	<p><em>Enable inbound SSH sessions by VTY</em>
+            	</p>
+
+		<p><b>R(config)#ip ssh version 2</b></p>
+            	<p><em>Define the SSH version to use</em>
+            	</p>
+
+		<p><b>R(config-line)#transport input telnet ssh</b></p>
+            	<p><em>Enable the VTY line to use SSH</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport mode Access</b></p>
+            	<p><em>Configure Switch Interfaces as Access Port</em>
+            	</p>
+		
+		<p><b>SW(config-if)#switchport port-security</b></p>
+            	<p><em>Configure port security on interfaces</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport port-security maximum 1</b></p>
+            	<p><em>Specify the maximum number of MAC addresses allowed</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport port-security violation shutdown</b></p>
+            	<p><em>Define the action to take when a violation occurs</em>
+            	</p>
+
+		<p><b>SW(config-if)#switchport port-security mac-address</b></p>
+            	<p><em>Specifying Allowed MAC Address</em>
+            	</p>
+		
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de Comandos Cisco</p>
+    </footer>
+</body>
+</html>
